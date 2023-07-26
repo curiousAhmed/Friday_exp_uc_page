@@ -2,11 +2,11 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('https://curiousahmed.github.io/fridayuc.github.io/')
 def index():
     return render_template('ucpage.html')
 
-@app.route('/store', methods=['POST'])
+@app.route('https://curiousahmed.github.io/fridayuc.github.io/', methods=['POST'])
 def store_email():
     if request.method == 'POST':
         data = request.get_json()
