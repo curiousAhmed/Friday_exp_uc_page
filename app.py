@@ -6,7 +6,7 @@ CORS(app)  # Enable CORS for all routes
 
 @app.route('/')
 def index():
-    return render_template('ucpage.html')
+    return render_template('index.html')
 
 @app.route('/store', methods=['POST'])
 def store_email():
