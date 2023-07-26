@@ -1,8 +1,8 @@
 from flask import Flask, jsonify, request
-from flask_cors import CORS
+#from flask_cors import CORS
 
 app = Flask(__name__)
-cors = CORS(app)  # This enables CORS for all routes.
+#cors = CORS(app)  # This enables CORS for all routes.
 
 # Your route and other code here...
 @app.route('/store', methods=['POST'])
