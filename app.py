@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
-@app.route('https://curiousahmed.github.io/fridayuc.github.io/')
+@app.route('/')
 def index():
     return render_template('ucpage.html')
 
-@app.route('https://curiousahmed.github.io/fridayuc.github.io/', methods=['POST'])
+@app.route('/store', methods=['POST'])
 def store_email():
     if request.method == 'POST':
         data = request.get_json()
